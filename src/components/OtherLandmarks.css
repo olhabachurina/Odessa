@@ -1,0 +1,67 @@
+.landmarks-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  /* Стили для заголовка */
+  .landmarks-container h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff6347;
+  }
+  
+  /* Стили для списка достопримечательностей */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .landmark-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+  }
+  
+  .landmark-item img {
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .landmark-item p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Плавная анимация */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Анимация для появления текста */
+  .landmark-item:hover img {
+    transform: scale(1.05); /* Увеличение при наведении */
+  }
+  
+  /* Стили для подзаголовка */
+  h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 50px;
+    color: #555;
+  }

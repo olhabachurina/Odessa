@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2af39c 0%, #3b05a8 100%);
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  /* Контейнер с градиентным фоном */
+  .slider-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: transparent; /* Убедитесь, что нет другого цвета фона */
+    background: none; /* Отключаем белый фон */
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Градиентная анимация */
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Стили для слайдера */
+  .slider {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Кнопки для переключения */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .nav-button.prev {
+    left: 10px;
+  }
+  
+  .nav-button.next {
+    right: 10px;
+  }
